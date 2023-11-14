@@ -38,16 +38,15 @@ const posts = [
 ];
 
 function createPost(posts) {
-  for (let i = 0; i < posts.length; i++) {
     let result = `
         <div class="post"> 
             <div class="post__header"> 
                 <div class="post-meta">                    
                     <div class="post-meta__icon">
-                        <img class="profile-pic" src="${posts.image}" alt="Phil Mangione">
+                        <img class="profile-pic" src="${posts.author.image}" alt="Phil Mangione">
                     </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author">${posts.name}</div>
+                    <div class="post-meta__author">${posts.author.name}</div>
                     <div class="post-meta__time">${posts.created}</div>
                 </div>
             </div>
@@ -71,7 +70,7 @@ function createPost(posts) {
             </div>`;
 
     return result;
-  }
+  
 };
 
 function printPost() {
